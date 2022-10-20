@@ -1,13 +1,16 @@
 // 1. import `NextUIProvider` component
-import { NextUIProvider } from '@nextui-org/react';
+import { NextUIProvider } from "@nextui-org/react";
+import Layout from "../components/Layout";
 
 function MyApp({ Component, pageProps }) {
-  return (
-    // 2. Use at the root of your app
-    <NextUIProvider>
-      <Component {...pageProps} />
-    </NextUIProvider>
-  );
+    return (
+        // 2. Use at the root of your app
+        <NextUIProvider>
+            <Layout>
+                <Component {...pageProps} />
+            </Layout>
+        </NextUIProvider>
+    );
 }
 
 export default MyApp;
