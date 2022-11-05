@@ -1,0 +1,15 @@
+
+.background {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("/assets/banner1.jpg");
+  background-position: 10% 25%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

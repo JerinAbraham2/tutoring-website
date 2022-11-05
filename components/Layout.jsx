@@ -1,13 +1,14 @@
-import React from "react";
+import Banner from "./banner/Banner";
 import NavBar from "./NavBar";
 
 const Layout = ({ children }) => {
-    return (
-        <>
-            <NavBar />
-            {children}
-        </>
-    );
+  return (
+    <>
+      <NavBar />
+      <Banner />
+      {children}
+    </>
+  );
 };
 
 export default Layout;

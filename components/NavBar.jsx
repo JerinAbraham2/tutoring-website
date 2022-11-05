@@ -8,9 +8,16 @@ export default function NavBar() {
             isBordered
             variant="sticky"
             maxWidth={"fluid"}
-            containerCss={{ diplay: "flex", justifyContent: "space-around" }}
+            containerCss={{
+                diplay: "flex",
+                justifyContent: "space-between",
+                // anything above or equal to sm
+                "@xs": {
+                    display: "flex",
+                    justifyContent: "space-around",
+                },
+            }}
         >
-            <Navbar.Toggle showIn="xs" />
             <Navbar.Brand>
                 <AcmeLogo />
                 <Link href="/">
@@ -19,7 +26,14 @@ export default function NavBar() {
                     </Text>
                 </Link>
             </Navbar.Brand>
-
+            <Navbar.Content showIn="xs">
+                <Link href="/">
+                    <Text b color="inherit">
+                        Merin&apos;s Tutoring
+                    </Text>
+                </Link>
+            </Navbar.Content>
+            <Navbar.Toggle showIn="xs" />
             <Navbar.Content
                 enableCursorHighlight
                 activeColor="secondary"
